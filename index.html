@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task Manager App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>📋 Task Manager</h1>
+  <p class="subtitle">Manage your daily tasks easily</p>
+
+  <div class="form-box">
+    <input type="text" id="taskInput" placeholder="Enter your task...">
+    <select id="priorityInput">
+      <option value="High">High Priority</option>
+      <option value="Medium" selected>Medium Priority</option>
+      <option value="Low">Low Priority</option>
+    </select>
+    <input type="date" id="dateInput">
+    <button id="addBtn" onclick="addTask()">Add Task</button>
+  </div>
+
+  <div class="filters">
+    <button onclick="filterTasks('All')" class="filter-btn active">All</button>
+    <button onclick="filterTasks('High')" class="filter-btn">High</button>
+    <button onclick="filterTasks('Medium')" class="filter-btn">Medium</button>
+    <button onclick="filterTasks('Low')" class="filter-btn">Low</button>
+    <button onclick="filterTasks('Completed')" class="filter-btn">Completed</button>
+  </div>
+
+  <p id="taskCount"></p>
+  <ul id="taskList"></ul>
+  <button id="clearBtn" onclick="clearCompleted()">Clear Completed</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
